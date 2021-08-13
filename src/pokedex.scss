@@ -1,0 +1,67 @@
+// Panel widths
+$panelWidth: 400px;
+$leftPanelHeight: 500px;
+$rightPanelHeight: 450px;
+$topPanel: 50px;
+
+// Colors
+$panelColor: red;
+
+.pokedex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+/* Frame */
+// Left Panel
+.left-panel {
+  height: $leftPanelHeight;
+  width: $panelWidth;
+  background-color: $panelColor;
+}
+
+.left-top-panel {
+  height: $topPanel;
+  width: $panelWidth;
+  background-color: yellow;
+}
+
+.pokemon-view-panel {
+  width: 75%;
+  height: 50%;
+  background-color: grey;
+  margin: auto;
+  margin-top: 10%;
+}
+
+.config-panel {
+  width: 75%;
+  height: 15%;
+  background-color: white;
+  margin: auto;
+  margin-top: 10%;
+}
+
+// Right panel
+.right-panel {
+  width: $panelWidth;
+  height: $rightPanelHeight;
+  background-color: $panelColor;
+  margin-top: $topPanel;
+}
+
+.navigation-panel {
+  width: 75%;
+  height: 80%;
+  background-color: grey;
+  margin: auto;
+  margin-top: 10%;
+}
+
+// Middle axel
+.middle-axel {
+  width: 50px;
+  background-color: orange;
+}
