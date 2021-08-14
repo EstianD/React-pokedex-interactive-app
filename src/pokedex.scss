@@ -37,11 +37,61 @@ $panelColor: red;
 }
 
 .config-panel {
+  display: flex;
   width: 75%;
   height: 15%;
   background-color: white;
   margin: auto;
   margin-top: 10%;
+}
+
+// Config buttons
+.navigation-btn {
+  width: 60px;
+  height: 60px;
+  background-color: grey;
+  margin-left: 10px;
+  margin-top: 2.5%;
+}
+
+.console-btn {
+  text-shadow: 1px 1px pink, -1px -1px maroon;
+
+  line-height: 1.5em;
+  text-align: center;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  -webkit-border-radius: 0.75em;
+  -moz-border-radius: 0.75em;
+  -o-border-radius: 0.75em;
+  border-radius: 0.75em;
+  background-color: red;
+  -webkit-box-shadow: 0 0.2em maroon;
+  -moz-box-shadow: 0 0.2em maroon;
+  -o-box-shadow: 0 0.2em maroon;
+  box-shadow: 0 0.2em maroon;
+  color: red;
+  margin: 5px;
+  margin-top: 5%;
+  margin-left: 5%;
+  background-color: red;
+  background-image: -o-linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  background-image: -moz-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: -webkit-linear-gradient(
+    left top,
+    pink 3%,
+    red 22%,
+    maroon 99%
+  );
+  background-image: linear-gradient(left top, pink 3%, red 22%, maroon 99%);
+  cursor: pointer;
+  padding-left: 5px;
 }
 
 // Right panel
@@ -53,11 +103,43 @@ $panelColor: red;
 }
 
 .navigation-panel {
+}
+
+.navigation-container {
   width: 75%;
   height: 80%;
   background-color: grey;
   margin: auto;
   margin-top: 10%;
+}
+
+.search-container {
+  padding: 10px;
+}
+
+.search-container > input {
+  height: 1.3rem;
+  width: 90%;
+}
+
+.pokemon-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.pokemon-list-name {
+  width: 45%;
+  text-align: left;
+  word-spacing: 0.8rem;
+  line-height: 1.2rem;
+  margin: 5px;
+  font-size: 0.8rem;
+}
+
+.pokemon-list-name:hover {
+  background-color: white;
+  cursor: pointer;
 }
 
 // Middle axel
