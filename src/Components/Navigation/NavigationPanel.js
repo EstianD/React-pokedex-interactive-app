@@ -5,11 +5,27 @@ import PokemonSelect from "./PokemonSelect";
 
 const PER_PAGE = 20;
 
+function calculateNumPage(arrayLength) {
+  let numPages = 0;
+
+  for (let p = arrayLength; p >= 20; p = p - 20) {
+    numPages++;
+  }
+  // Check for any remainder after page loop
+  if (arrayLength % 20 !== 0) {
+    numPages++;
+  }
+
+  return numPages;
+}
+
 function NavigationPanel({
   filteredPokemon,
   handlePokemonSelect,
   page,
   setPage,
+  searchInput,
+  setSearchInput,
 }) {
   console.log("filtered: ", filteredPokemon);
   console.log("page: ", page);
@@ -18,11 +34,11 @@ function NavigationPanel({
     <div className="navigation-panel">
       <div className="navigation-container">
         <div className="search-container">
-          {/* <input
+          <input
             type="text"
             value={searchInput}
             onChange={(e) => setSearchInput(e.target.value)}
-          /> */}
+          />
         </div>
         <div className="pokemon-list">
           {filteredPokemon
@@ -42,8 +58,17 @@ function NavigationPanel({
               );
             })}
         </div>
-        {/* {`${page}/${totalPages}`} */}
-        <button onClick={() => setPage((prevPage) => prevPage + 1)}>></button>
+        {page > 1 && (
+          <button onClick={() => setPage((prevPage) => prevPage - 1)}>
+            {"<"}
+          </button>
+        )}
+        {`${page}/${calculateNumPage(filteredPokemon.length)}`}
+        {page <= calculateNumPage(filteredPokemon.length) && (
+          <button onClick={() => setPage((prevPage) => prevPage + 1)}>
+            {">"}
+          </button>
+        )}
       </div>
     </div>
   );

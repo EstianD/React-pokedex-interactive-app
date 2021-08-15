@@ -14,7 +14,6 @@ function Pokedex() {
     filteredPokemon,
     searchInput,
     setSearchInput,
-    totalPages,
     page,
     setPage,
     handlePokemonSelect,
@@ -39,6 +38,8 @@ function Pokedex() {
             handlePokemonSelect={handlePokemonSelect}
             page={page}
             setPage={setPage}
+            searchInput={searchInput}
+            setSearchInput={setSearchInput}
           />
         )}
       </div>

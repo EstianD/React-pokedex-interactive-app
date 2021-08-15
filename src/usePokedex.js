@@ -7,7 +7,7 @@ import axios from "axios";
 // Pokemon desc: https://pokeapi.co/api/v2/pokemon-species/<id/name>
 
 const POKEMONS_URL = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=898";
-const POKEMONS_DESC_URL = "https://pokeapi.co/api/v2/pokemon-species";
+const POKEMONS_DESC_URL = "https://pokeapi.co/api/v2/pokemon";
 const PER_PAGE = 20;
 
 export default function usePokeDex() {
