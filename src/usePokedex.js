@@ -53,6 +53,7 @@ export default function usePokeDex() {
   useEffect(() => {
     //  console.log(searchInput);
     //  const pokemonArrayCopy = [...pokemonAll];
+    setPage(1);
     const searchResults = [];
     pokemonAll.map((pokemon) => {
       if (pokemon.name.includes(searchInput)) {
@@ -66,7 +67,8 @@ export default function usePokeDex() {
     setPokemonLoading(true);
     setSelectedPokemon({});
     console.log("id: ", id);
-    const response = await axios.get(`${POKEMONS_DESC_URL}/${id}`);
+    let response = await axios.get(`${POKEMONS_DESC_URL}/${id}`);
+    response = { ...response, id: id };
     if (response) {
       setSelectedPokemon(response.data);
       setPokemonLoading(false);

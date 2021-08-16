@@ -64,7 +64,7 @@ function NavigationPanel({
           </button>
         )}
         {`${page}/${calculateNumPage(filteredPokemon.length)}`}
-        {page <= calculateNumPage(filteredPokemon.length) && (
+        {page < calculateNumPage(filteredPokemon.length) && (
           <button onClick={() => setPage((prevPage) => prevPage + 1)}>
             {">"}
           </button>

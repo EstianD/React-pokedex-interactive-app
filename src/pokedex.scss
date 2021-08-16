@@ -31,9 +31,52 @@ $panelColor: red;
 .pokemon-view-panel {
   width: 75%;
   height: 50%;
-  background-color: grey;
+  // background-color: rgb(231, 231, 231);
   margin: auto;
   margin-top: 10%;
+}
+
+.pokemon-view-panel > div {
+  display: flex;
+}
+
+.pokemon-model-container {
+}
+
+.pokemon-img {
+  width: 150px;
+}
+
+.pokemon-types-container {
+  display: flex;
+  margin-left: 5px;
+}
+
+.element-type {
+  padding: 5px;
+  border-radius: 15%;
+  margin: 5px;
+  border: 1px solid white;
+}
+
+// Stats
+.pokemon-stats-container {
+  position: relative;
+}
+
+.pokemon-stats-table {
+  text-align: left;
+  font-size: 0.9em;
+}
+
+.pokemon-viewer-pagination-container {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+}
+
+.pokemon-viewer-pagination-container > button {
+  margin-left: 5px;
 }
 
 .config-panel {

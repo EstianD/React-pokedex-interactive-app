@@ -27,21 +27,20 @@ function Pokedex() {
         <PokemonViewer
           selectedPokemon={selectedPokemon}
           pokemonLoading={pokemonLoading}
+          handlePokemonSelect={handlePokemonSelect}
         />
         <ConfigPanel />
       </div>
       <div className="middle-axel"></div>
       <div className="right-panel">
-        {filteredPokemon.length > 0 && (
-          <NavigationPanel
-            filteredPokemon={filteredPokemon}
-            handlePokemonSelect={handlePokemonSelect}
-            page={page}
-            setPage={setPage}
-            searchInput={searchInput}
-            setSearchInput={setSearchInput}
-          />
-        )}
+        <NavigationPanel
+          filteredPokemon={filteredPokemon}
+          handlePokemonSelect={handlePokemonSelect}
+          page={page}
+          setPage={setPage}
+          searchInput={searchInput}
+          setSearchInput={setSearchInput}
+        />
       </div>
     </div>
   );
